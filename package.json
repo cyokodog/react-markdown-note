@@ -1,0 +1,47 @@
+{
+  "name": "react-markdown-note",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:notes": "webpack --mode development -w",
+    "dev:watcher": "webpack --config webpack.config-watcher --mode development -w",
+    "build:notes": "rm -rf public/scripts && webpack",
+    "build:watcher": "webpack --config webpack.config-watcher",
+    "build": "npm run build:notes && npm run build:watcher",
+    "start:watcher": "node public/watcher.bundle.js",
+    "start:server": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cyokodog/react-markdown-note.git"
+  },
+  "keywords": [],
+  "author": "cyokodog <cyokodog@gmail.com> (https://www.cyokodog.net/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cyokodog/react-markdown-note/issues"
+  },
+  "homepage": "https://github.com/cyokodog/react-markdown-note#readme",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.4.0",
+    "chokidar": "^3.4.3",
+    "live-server": "^1.2.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-markdown": "^4.3.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
+    "toc-util": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.0",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "ts-loader": "^8.0.0",
+    "typescript": "^3.9.6",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^2.5.2"
+  }
+}
